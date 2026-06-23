@@ -1,5 +1,6 @@
 
 import sys
+import os
 import requests
 import numpy as np
 
@@ -7,8 +8,7 @@ from PyQt6.QtWidgets import QApplication, QWidget, QGridLayout, QLabel, QVBoxLay
 from PyQt6.QtCore import QTimer
 import pyqtgraph as pg
 
-PHY_IP = "10.59.192.15:8080"
-URL = f"http://{PHY_IP}/get?accX&accY&accZ&gyrX&gyrY&gyrZ&yaw&pitch&roll&light&magX&magY&magZ&prox"
+PHY_IP = os.getenv("PHY_IP", "").strip()
 
 HISTORY = 100
 
@@ -95,7 +95,11 @@ class SensorDashboard(QWidget):
             pass
 
     def fetch(self):
-        r = requests.get(URL, timeout=1)
+        if not PHY_IP:
+            raise RuntimeError("Set the PHY_IP environment variable to your Phyphox address, for example 192.168.1.100:8080")
+
+        url = f"http://{PHY_IP}/get?accX&accY&accZ&gyrX&gyrY&gyrZ&yaw&pitch&roll&light&magX&magY&magZ&prox"
+        r = requests.get(url, timeout=1)
         return r.json()
 
     def update_data(self):

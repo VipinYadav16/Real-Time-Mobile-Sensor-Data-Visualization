@@ -44,11 +44,13 @@ pip install -r requirements.txt
 3. Make sure your phone and laptop are connected to the same Wi-Fi network.
 4. Enable Remote Access in Phyphox.
 5. Copy the IP address shown by Phyphox.
-6. Update the `PHY_IP` value in `sensor_data_visual.py` so it points to your phone, for example:
+6. Set the `PHY_IP` environment variable before running the dashboard, for example:
 
-```python
-PHY_IP = "192.168.1.100:8080"
+```bash
+set PHY_IP=192.168.1.100:8080
 ```
+
+If you prefer, you can set it in your shell session before launching the app. On PowerShell, use `$env:PHY_IP="192.168.1.100:8080"`.
 
 ## Run the Dashboard
 
