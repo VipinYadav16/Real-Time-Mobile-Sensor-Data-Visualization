@@ -41,9 +41,10 @@ pip install -r requirements.txt
 
 1. Open Phyphox on your phone.
 2. Select or create an experiment that exposes the sensors you want.
-3. Enable Remote Access in Phyphox.
-4. Copy the IP address shown by Phyphox.
-5. Update the `PHY_IP` value in `sensor_data_visual.py` so it points to your phone, for example:
+3. Make sure your phone and laptop are connected to the same Wi-Fi network.
+4. Enable Remote Access in Phyphox.
+5. Copy the IP address shown by Phyphox.
+6. Update the `PHY_IP` value in `sensor_data_visual.py` so it points to your phone, for example:
 
 ```python
 PHY_IP = "192.168.1.100:8080"
