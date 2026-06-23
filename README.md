@@ -36,33 +36,3 @@ PHY_IP = "192.168.1.100:8080"
 ```bash
 python sensor_data_visual.py
 ```
-
-## Push to GitHub
-
-If this folder is not already a Git repository, initialize it first:
-
-```bash
-git init
-```
-
-Then add and commit the files:
-
-```bash
-git add .
-git commit -m "Initial commit"
-```
-
-Create a new empty repository on GitHub, then add it as the remote:
-
-```bash
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
-```
-
-Push the code:
-
-```bash
-git branch -M main
-git push -u origin main
-```
-
-If Git asks for authentication, use your GitHub username and a personal access token instead of your password.
