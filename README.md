@@ -2,6 +2,24 @@
 
 This project visualizes live sensor data from a phone running Phyphox and streams it into a Python dashboard.
 
+## Setup Screenshots
+
+### Step 1: Open the Phyphox app
+
+![Step 1 - Starting page of the mobile app](Step%201.jpeg)
+
+### Step 2: Create the experiment with selected sensors
+
+![Step 2 - Creating an experiment with selected sensors](Step%202.jpeg)
+
+### Step 3: Start streaming with Remote Access enabled
+
+![Step 3 - Running experiment with Remote Access and URL shown](Step%203.jpeg)
+
+### Step 4: View the custom Python dashboard
+
+![Step 4 - Custom built dashboard](Step%204.png)
+
 ## Files
 
 - `sensor_data_visual.py` - PyQt6 dashboard with live plots for accelerometer, gyroscope, orientation, magnetometer, and light.
